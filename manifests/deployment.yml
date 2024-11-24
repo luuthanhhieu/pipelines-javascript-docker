@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: luuthanhhieupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: luuthanhhieupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: luuthanhhieupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: luuthanhhieupipelinesjavascriptdocker 
+          image: luucontainerregistry1234.azurecr.io/luuthanhhieupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
